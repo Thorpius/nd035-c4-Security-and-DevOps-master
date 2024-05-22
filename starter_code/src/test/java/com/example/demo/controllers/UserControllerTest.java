@@ -64,8 +64,8 @@ public class UserControllerTest {
     public void create_user_password_too_short() {
         CreateUserRequest r = new CreateUserRequest();
         r.setUsername("Minh");
-        r.setPassword("shortpass");
-        r.setConfirmPassword("shortpass");
+        r.setPassword("short");
+        r.setConfirmPassword("short");
         final ResponseEntity<User> response = userController.createUser(r);
         assertNotNull(response);
         assertEquals(400, response.getStatusCodeValue());
